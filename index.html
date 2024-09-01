@@ -10,40 +10,30 @@
         margin: 0;
         padding: 0;
         font-family: "Arial", sans-serif;
-        background: linear-gradient(to right, #f8b500, #fceabb);
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
       }
-       body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('./one.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-        }
+
+      video {
+        /* position: fixed; */
+        right: 0;
+        bottom: 0;
+        min-width: 70%;
+        min-height: 100%;
+        z-index: -1;
+        filter: brightness(50%);
+      }
 
       .container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
         text-align: center;
-      }
-
-      .card {
-        background: white;
-        padding: 20px 40px;
+        background: rgba(255, 255, 255, 0.8);
         border-radius: 15px;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-        position: relative;
       }
 
       h1 {
@@ -59,7 +49,7 @@
 
       .balloons {
         position: absolute;
-        top: -100px;
+        top: -150px;
         left: 50%;
         transform: translateX(-50%);
         width: 300px;
@@ -87,39 +77,39 @@
         background: #ff7b7b;
       }
 
-      .balloon:nth-child(2) {
+      .balloon:nth-child(1) {
         left: 60px;
+        top: 60px;
+        background: #f76c6c;
+        animation-duration: 4s;
+      }
+
+      .balloon:nth-child(2) {
+        left: 100px;
+        top: 30px;
         background: #f76c6c;
         animation-duration: 5s;
       }
 
       .balloon:nth-child(3) {
-        left: 120px;
+        left: 140px;
+        top: 60px;
         background: #ff9b9b;
         animation-duration: 6s;
       }
 
       .balloon:nth-child(4) {
-        left: 180px;
+        left: 40px;
+        top: 100px;
         background: #fceabb;
         animation-duration: 4.5s;
       }
 
       .balloon:nth-child(5) {
-        left: 240px;
+        left: 160px;
+        top: 100px;
         background: #f8b500;
         animation-duration: 5.5s;
-      }
-
-      .images {
-        margin-top: 20px;
-      }
-
-      .images img {
-        width: 100px;
-        margin: 10px;
-        border-radius: 10px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       }
 
       @keyframes float {
@@ -133,31 +123,37 @@
           transform: translateY(0);
         }
       }
+
+      .images img {
+        width: 100px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="card">
-        <div class="balloons">
-          <div class="balloon" style="--i: 1"></div>
-          <div class="balloon" style="--i: 2"></div>
-          <div class="balloon" style="--i: 3"></div>
-          <div class="balloon" style="--i: 4"></div>
-          <div class="balloon" style="--i: 5"></div>
-        </div>
-        <h1>Happy Birthday, Sourabh Pal!</h1>
-        <p>
-          Wishing you a day filled with happiness and a year filled with joy.
-        </p>
-        <p>Enjoy your special day!</p>
+    <video autoplay muted loop>
+      <source
+        src="./White Collage Happy Birthday Mobile Video.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
 
-        <div class="images">
-          <img
-            src="https://images.stockcake.com/public/5/c/6/5c600b13-8611-4f32-a078-7d6659027a7c_large/colorful-layered-cake-stockcake.jpg"
-            alt="Cake 2"
-          />
-          <img src="./one.jpg" alt="Cartoon Avatar" />
-        </div>
+    <div class="container">
+      <h1>Happy Birthday, Miss Ujala! <b> Wifey  ❤❤❤❤❤❤❤❤❤ </b></h1>
+      <p>Wishing you a day filled with happiness and a year filled with joy.</p>
+      <p><b>Enjoy your special day!</b></p>
+      <p>
+        You are my joy, my heart, and my everything. I’m so grateful to have you
+        in my life.
+      </p>
+      <div class="images">
+        <img src="./one.jpg" alt="Cartoon Avatar" />
+        <img src="./three.jpg" alt="Cartoon Avatar" />
+        <img src="./for.jpg" alt="Cartoon Avatar" />
+        <img src="./five.jpg" alt="Cartoon Avatar" />
       </div>
     </div>
   </body>
